@@ -1,8 +1,8 @@
 console.log("hello")
-const my_sentence = "Change your life learn to code"
+const my_sentence = "Change your life, learn to code."
 
 function spin_words(sentence){
-  let words = sentence.split(" ");
+  let words = sentence.split(/\b/);
   let newSentenceArrey = [];
     words.map((word) => {
       let newWord;
@@ -13,7 +13,7 @@ function spin_words(sentence){
       }
       newSentenceArrey.push(newWord);
     });
-    console.log(newSentenceArrey.join(" "));
+    console.log(newSentenceArrey.join(""));
     return newSentenceArrey.join(" ");
   }
 
